@@ -13116,6 +13116,7 @@ h3 {
 .h4 {
   font-size: 18px;
   line-height: 24px;
+  font-weight: 700;
 }
 @media (max-width: 991px) {
   .h4 {
@@ -13325,8 +13326,16 @@ h5 {
 .content .sidebar--sm .sidebarNav.active {
   display: block;
 }
+@media (max-width: 767px) {
+  .content .sidebar--sm .sidebarNav ul li:nth-child(n+6) {
+    display: block;
+  }
+}
 .content .sidebar--sm .sidebarToggle {
   display: block;
+}
+.content .sidebar--sm .sidebarNavB {
+  display: none;
 }
 .content .sidebarTitle {
   margin-bottom: 12px;
@@ -13335,8 +13344,23 @@ h5 {
 .content .sidebarNav {
   transition: all 0.2s linear;
 }
+@media (max-width: 767px) {
+  .content .sidebarNav.sidebarMoreNav ul li:nth-child(n+6) {
+    display: block;
+  }
+}
 .content .sidebarNav ul {
   border-left: 1px solid rgba(0, 0, 0, 0.3);
+}
+@media (max-width: 767px) {
+  .content .sidebarNav ul {
+    border-left: none;
+  }
+}
+@media (max-width: 767px) {
+  .content .sidebarNav ul li:nth-child(n+6) {
+    display: none;
+  }
 }
 .content .sidebarNav ul li:not(:last-child) {
   margin-bottom: 10px;
@@ -13345,6 +13369,11 @@ h5 {
   padding-left: 14px;
   position: relative;
   transition: color 0.2s linear;
+}
+@media (max-width: 767px) {
+  .content .sidebarNav ul li a {
+    padding-left: 0;
+  }
 }
 .content .sidebarNav ul li a:hover {
   color: #99261e;
@@ -13526,6 +13555,23 @@ h5 {
   opacity: 1;
 }
 
+.sidebarMore {
+  width: fit-content;
+  background: url("../img/icons/arrow-down.svg") no-repeat right center/10px;
+  padding-right: 20px;
+}
+
+.sidebarNavB {
+  border-top: 1px solid rgba(0, 0, 0, 0.15);
+  padding-top: 10px;
+  margin-top: 10px;
+}
+@media (min-width: 768px) {
+  .sidebarNavB {
+    display: none;
+  }
+}
+
 .button {
   display: flex;
   align-items: center;
@@ -13689,7 +13735,7 @@ h5 {
     left: 0;
     position: fixed;
     width: 100%;
-    top: 69px;
+    top: 67px;
     overflow-y: scroll;
     padding-bottom: 50px;
   }

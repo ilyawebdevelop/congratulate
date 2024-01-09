@@ -180,6 +180,7 @@ h3 {
 .h4 {
   font-size: 18px;
   line-height: 24px;
+  font-weight: 700;
 
   @media (max-width: 991px) {
     font-size: 16px;
@@ -372,12 +373,14 @@ h5 {
       background: #f2f2f2;
       top: 66px;
     }
+
     &Toggle {
       display: none;
-    
+
       &.active {
         display: block;
       }
+
       &Btn {
         width: fit-content;
         margin-left: auto;
@@ -394,21 +397,39 @@ h5 {
       position: sticky;
       max-height: 60vh;
       overflow-y: scroll;
- 
+
       // width: 100%;
 
       .sidebarTitle {
         display: none;
       }
+
       .sidebarNav {
         display: none;
         margin-top: 10px;
+
         &.active {
           display: block;
         }
+
+        ul {
+          li {
+            @media(max-width: 767px) {
+              &:nth-child(n+6) {
+                display: block;
+              }
+            }
+          }
+        }
       }
+ 
+
       .sidebarToggle {
-        display: block;   
+        display: block;
+      }
+
+      .sidebarNavB {
+        display: none;
       }
     }
 
@@ -420,10 +441,31 @@ h5 {
     &Nav {
       transition: all .2s linear;
 
+      &.sidebarMoreNav {
+        ul {
+          li {
+            @media(max-width: 767px) {
+              &:nth-child(n+6) {
+                display: block;
+              }
+            }
+          }
+        }
+      } 
+
       ul {
         border-left: 1px solid rgba(0, 0, 0, .3);
+        @media(max-width: 767px){
+          border-left: none;
+        }
 
         li {
+          @media(max-width: 767px) {
+            &:nth-child(n+6) {
+              display: none;
+            }
+          }
+
           &:not(:last-child) {
             margin-bottom: 10px;
           }
@@ -432,6 +474,9 @@ h5 {
             padding-left: 14px;
             position: relative;
             transition: color .2s linear;
+            @media(max-width: 767px){
+              padding-left: 0;
+            }
 
             &:hover {
               color: #99261e;
@@ -492,7 +537,8 @@ h5 {
     align-items: center;
     column-gap: 15px;
     flex-wrap: wrap;
-    @media(max-width: 575px){
+
+    @media(max-width: 575px) {
       column-gap: 10px;
     }
   }
@@ -500,7 +546,8 @@ h5 {
   &Update {
     font-size: 14px;
     opacity: .7;
-    @media(max-width: 575px){
+
+    @media(max-width: 575px) {
       font-size: 12px;
     }
   }
@@ -532,7 +579,8 @@ h5 {
     object-fit: cover;
     overflow: hidden;
     border-radius: 50%;
-    @media(max-width: 575px){
+
+    @media(max-width: 575px) {
       width: 45px;
       height: 45px;
     }
@@ -641,5 +689,21 @@ h5 {
         }
       }
     }
+  }
+}
+
+.sidebarMore {
+  width: fit-content;
+  background: url('@img/icons/arrow-down.svg') no-repeat right center / 10px;
+  padding-right: 20px;
+}
+
+.sidebarNavB {
+  border-top: 1px solid rgba(0, 0, 0, .15);
+  padding-top: 10px;
+  margin-top: 10px;
+
+  @media(min-width: 768px) {
+    display: none;
   }
 }

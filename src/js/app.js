@@ -36,6 +36,7 @@ Swiper.use([Navigation, Pagination, Autoplay, Mousewheel, EffectFade, Thumbs, Sc
     let sidebarBtn = document.querySelector('.sidebarToggleBtn');
     let sidebarNav = document.querySelector('.sidebarNav');
     let sidebarLinkAll = document.querySelectorAll('.sidebarNav ul li a');
+    let sidebarMoreBtn = document.querySelector('.sidebarMore');
     sidebarBtn.addEventListener('click', () => {
       sidebarNav.classList.toggle('active');
     });
@@ -43,6 +44,9 @@ Swiper.use([Navigation, Pagination, Autoplay, Mousewheel, EffectFade, Thumbs, Sc
       el.addEventListener('click', () => {
         sidebarNav.classList.remove('active');
       });
+    });
+    sidebarMoreBtn.addEventListener('click', () => {
+      sidebarNav.classList.toggle('sidebarMoreNav');
     });
     const sidebarHeightToTop = $('.sidebar').offset().top;
     $(window).scroll(function () {
