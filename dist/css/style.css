@@ -13635,6 +13635,11 @@ h5 {
   transition: all 0.5s ease;
   background-color: #fff;
 }
+@media (min-width: 992px) {
+  .headerB {
+    padding-bottom: 0;
+  }
+}
 @media (max-width: 991px) {
   .headerB {
     padding: 0;
@@ -13723,11 +13728,22 @@ h5 {
     padding-right: 12px;
   }
 }
+.headerNavList > li {
+  position: relative;
+}
 @media (max-width: 991px) {
   .headerNavList > li {
     border-bottom: 1px solid rgba(0, 0, 0, 0.15);
     display: flex;
     justify-content: space-between;
+  }
+}
+.headerNavList > li:hover .headerNavSublistW {
+  display: block;
+}
+@media (min-width: 992px) {
+  .headerNavList > li:hover .headerNavSublistW {
+    background-color: #fff;
   }
 }
 .headerNavList > li > a {
@@ -13753,6 +13769,11 @@ h5 {
     border-color: transparent;
   }
 }
+@media (min-width: 992px) {
+  .headerNavSublist li {
+    margin-bottom: 14px;
+  }
+}
 @media (max-width: 991px) {
   .headerNavSublist li {
     margin-bottom: 15px;
@@ -13766,6 +13787,11 @@ h5 {
   position: relative;
   left: -4px;
 }
+@media (min-width: 992px) {
+  .headerNavSublistHeader {
+    display: none;
+  }
+}
 .headerNavSublistHeaderText {
   font-size: 22px;
   font-weight: 700;
@@ -13777,6 +13803,19 @@ h5 {
 }
 .headerNavSublistW {
   display: none;
+}
+@media (min-width: 992px) {
+  .headerNavSublistW {
+    position: absolute;
+    left: 0;
+    top: 100%;
+    padding-left: 20px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    padding-right: 20px;
+    width: 200px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 0.1875rem 0.5625rem;
+  }
 }
 @media (max-width: 991px) {
   .headerNavSublistW {
