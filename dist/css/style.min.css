@@ -13702,9 +13702,22 @@ h5 {
 }
 .headerB.fixed-on .logoFixed {
   display: block;
+  max-width: 200px;
+  width: 100%;
+}
+.headerLogo {
+  max-width: 300px;
+  width: 100%;
+}
+@media (max-width: 991px) {
+  .headerLogo {
+    max-width: 200px;
+  }
 }
 .headerLogo img {
-  max-width: 208px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
 }
 @media (max-width: 575px) {
   .headerLogo img {
