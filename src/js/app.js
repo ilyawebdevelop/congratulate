@@ -45,7 +45,7 @@ Swiper.use([Navigation, Pagination, Autoplay, Mousewheel, EffectFade, Thumbs, Sc
         sidebarNav.classList.remove('active');
       });
     });
-    sidebarMoreBtn.addEventListener('click', () => {
+    sidebarMoreBtn?.addEventListener('click', () => {
       sidebarNav.classList.toggle('sidebarMoreNav');
     });
     const sidebarHeightToTop = $('.sidebar').offset().top;

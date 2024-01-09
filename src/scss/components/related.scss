@@ -26,8 +26,11 @@
       grid-template-columns: 160px auto;
     }
     &:not(:last-child){
-      border-bottom: 1px solid rgba(0,0,0,.15);
-      padding-bottom: 16px;
+      @media(max-width: 575px){
+        border-bottom: 1px solid rgba(0,0,0,.15);
+        padding-bottom: 16px;
+      }
+    
     }
     &:first-child{
       // border-bottom: 1px solid rgba(0,0,0,.15);
