@@ -155,14 +155,17 @@
          display: flex;
          justify-content: space-between;
         }
-        &:hover {
-          .headerNavSublistW {
-            display: block;
-            @media(min-width: 992px){
-              background-color: #fff;
+        @media(min-width: 992px){
+          &:hover {
+            .headerNavSublistW {
+              display: block;
+              @media(min-width: 992px){
+                background-color: #fff;
+              }
             }
           }
         }
+ 
         &>a {
           text-transform: uppercase;
           font-weight: 700;
@@ -173,9 +176,8 @@
 
           @media(max-width: 991px) {
             padding-bottom: 10px;
-            padding-top: 10px;
-            
-          
+            padding-top: 10px;          
+  
             width: fit-content;
           }
 
@@ -198,6 +200,12 @@
         }
         @media(max-width: 991px){
           margin-bottom: 15px;
+        }
+        a {
+          transition: color .2s linear;
+          &:hover {
+            color: #99261e;
+          }
         }
       }
       &Header {
@@ -222,12 +230,13 @@
       }
       &W {
         display: none;
+        z-index: 2;
         @media(min-width: 992px){
           position: absolute;
           left: 0;
           top: 100%;
           padding-left: 20px;
-          padding-bottom: 20px;
+          padding-bottom: 8px;
           padding-top: 20px;
           padding-right: 20px;
           width: 200px;
