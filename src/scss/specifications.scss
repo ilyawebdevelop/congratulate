@@ -413,11 +413,15 @@ h5 {
         }
 
         ul {
+          border-left: 1px solid rgba(0, 0, 0, .3);
           li {
             @media(max-width: 767px) {
               &:nth-child(n+6) {
                 display: block;
               }
+            }
+            a {
+              padding-left: 20px;
             }
           }
         }

@@ -13326,10 +13326,16 @@ h5 {
 .content .sidebar--sm .sidebarNav.active {
   display: block;
 }
+.content .sidebar--sm .sidebarNav ul {
+  border-left: 1px solid rgba(0, 0, 0, 0.3);
+}
 @media (max-width: 767px) {
   .content .sidebar--sm .sidebarNav ul li:nth-child(n+6) {
     display: block;
   }
+}
+.content .sidebar--sm .sidebarNav ul li a {
+  padding-left: 20px;
 }
 .content .sidebar--sm .sidebarToggle {
   display: block;
