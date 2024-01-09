@@ -1,0 +1,55 @@
+.author {
+  &Sect {
+    padding-bottom: 200px;
+    padding-top: 0;
+    position: relative;
+    @media(max-width: 991px){
+      padding-top: 100px;
+    }
+  }
+
+  &Top {
+    height: 175px;
+    background: #fff5e5;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+
+  &Container {
+    padding-top: 30px;
+    max-width: 760px;
+    margin: auto;
+    position: relative;
+    z-index: 1;
+
+    @media(max-width: 1400px) {
+      max-width: 650px;
+    }
+    @media(max-width: 1199px){
+      max-width: 400px;
+    }
+    @media(max-width: 991px){
+      max-width: 720px;
+    }
+    @media(max-width: 767px){
+      max-width: 540px;
+    }
+  }
+
+  &Header {
+    display: flex;
+    column-gap: 16px;
+    @media(max-width: 575px){
+      flex-direction: column;
+      row-gap: 20px;
+    }
+
+    &Img {
+      width: 180px;
+      height: 180px;
+      object-fit: cover;
+    }
+  }
+}
