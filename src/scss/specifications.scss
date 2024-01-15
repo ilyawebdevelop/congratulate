@@ -396,7 +396,7 @@ h5 {
       margin-right: -12px;
       position: sticky;
       max-height: 60vh;
-      overflow-y: scroll;
+      overflow-y: scroll;  
 
       // width: 100%;
 
@@ -503,6 +503,15 @@ h5 {
           }
         }
       }
+    }
+  }
+  .sidebarMobile {
+    display: none;
+    &.sidebar--sm {
+      display: block;
+    }
+    &.active {
+      display: block;
     }
   }
 }
