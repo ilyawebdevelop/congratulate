@@ -275,6 +275,18 @@
         a {}
       }
     }
+    &NotLink {
+      text-transform: uppercase;     
+      font-weight: 700;
+      font-size: 14px;
+      transition: color 0.2s linear, border-color 0.2s linear;
+      border-bottom: 1px solid transparent;      
+      @media(max-width: 991px){
+        padding-top: 10px;
+        padding-bottom: 10px;
+        width: fit-content;
+      }
+    }
   }
 }
 .headerNavSubShow {

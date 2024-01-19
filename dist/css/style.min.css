@@ -13912,6 +13912,21 @@ h5 {
 .headerNavSublistW.active {
   display: block;
 }
+.headerNavNotLink {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 14px;
+  transition: color 0.2s linear, border-color 0.2s linear;
+  border-bottom: 1px solid transparent;
+}
+@media (max-width: 991px) {
+  .headerNavNotLink {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: fit-content;
+  }
+}
+
 .headerNavSubShow {
   width: 40%;
   background: url("../img/icons/arrow-right-black.svg") no-repeat right center/8px;
@@ -13987,20 +14002,18 @@ h5 {
 }
 .relatedItemImg {
   overflow: hidden;
-}
-.relatedItemImg img {
-  transition: transform 0.2s linear;
+  transition: opacity 0.2s linear;
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 @media (max-width: 575px) {
-  .relatedItemImg img {
+  .relatedItemImg {
     height: 105px;
   }
 }
-.relatedItemImg:hover img {
-  transform: scale(1.03);
+.relatedItemImg:hover {
+  opacity: 0.9;
 }
 
 .authorSect {
